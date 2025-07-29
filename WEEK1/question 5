@@ -1,0 +1,50 @@
+Calculator Program – Code Documentation
+ Header Files:
+#include <stdio.h>     // For input/output functions like printf and scanf
+#include <stdlib.h>    // For general utility functions (not directly used in this code)
+
+ Variables:
+- int menu → Stores user-selected option (1 to 4)
+- float num1, num2 → Stores user input values
+- float result → Stores the calculated result
+
+ Program Flow:
+1. Display the menu using printf.
+2. Capture user selection using scanf.
+3. Use switch(menu) to control logic for selected operation.
+4. Prompt for two numbers and perform the selected arithmetic operation.
+5. Print the result formatted to two decimal places.
+6. Default case handles invalid input.
+
+ Functionality per Case:
+
+CASE 1: Addition
+-----------------
+- Prompts for num1 and num2
+- result = num1 + num2
+- Outputs: `num1 + num2 = result`
+
+CASE 2: Subtraction
+--------------------
+- Prompts for num1 and num2
+- result = num1 - num2
+- Outputs: `num1 - num2 = result`
+
+CASE 3: Multiplication
+-----------------------
+- Prompts for num1 and num2
+- result = num1 * num2
+- Outputs: `num1 * num2 = result`
+
+CASE 4: Division
+-----------------
+- Prompts for num1 and num2
+- result = num1 / num2
+- Outputs: `num1 / num2 = result`
+
+DEFAULT CASE:
+--------------
+- Triggered if user input is not 1–4
+- Outputs: `"Enter correct number e.g 1 - 4"`
+
+
