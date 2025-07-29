@@ -1,0 +1,51 @@
+Mini Voting System – Reverse Engineering Summary
+
+File: ELECTION.H  
+Project URL: https://github.com/saurabhhirugade/Mini-Voting-System
+
+Structures:
+- struct currentValidID: Stores election year, branch code, and total number of voters.
+- typedef struct candidate: Defines candidate ID (cid), name (cname), and vote count.
+
+Global Variables:
+- candidateArray[20]: Stores up to 20 candidate records.
+- studentVotes[200]: Records student roll numbers who have voted.
+- currentValidID: Election-specific metadata.
+- numberOfCandidates: Tracks how many candidates are registered.
+
+Core Functions:
+
+1. Student ID Parsing and Validation:
+- extractYear(): Extracts year from student ID.
+- extractRollNo(): Extracts roll number.
+- checkBranchCode(): Validates the branch prefix in ID.
+
+2. Admin Panel Functions:
+- authenticateAdmin(): Verifies admin login credentials.
+- adminPanel(): Displays admin options like start election, ban IDs, delete votes, and view results.
+
+3. Voting Logic and Validation:
+- studentPanel(): Manages student voting flow.
+- isValid(): Validates student ID format and eligibility.
+- isVoted(): Checks if a student has already voted.
+- isBanned(): Checks if a student is banned from voting.
+- saveVote(): Records a valid vote and updates candidate data.
+
+4. Election Control and File Operations:
+- deleteIllegalVote(): Removes invalid votes from candidate files.
+- banID(): Flags student roll numbers as banned and logs them.
+- createCandidateFiles(): Initializes individual candidate vote files.
+- saveElectionInfoInFile(): Persists election metadata and candidate records.
+- loadElectionInfoFromFile(): Reloads saved election data and candidates.
+
+5. Result Processing:
+- getWinner(): Calculates winner based on highest votes or declares a tie.
+
+Program Flow:
+- Admin logs in and sets up the election.
+- Students enter ID to vote, which is validated and checked against ban/vote lists.
+- If eligible, vote is cast and stored.
+- Admin can manage voting records and monitor election progress.
+- Final results are displayed with vote counts and winner.
+
+
