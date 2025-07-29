@@ -1,1 +1,47 @@
+Project Title: Dijkstra-C  
+Author: maximetinu  
+Repository: https://github.com/Maximetinu/Dijkstra-C  
+Language: C  
+License: MIT
+
+Overview:  
+An open-source implementation of Dijkstra’s shortest path algorithm.  
+Graph input via CSV or terminal. Visualization supported via Graphviz.
+
+File Structure:  
+- src/                     → Source code files  
+- dijkstra.h              → Core algorithm declarations  
+- IO_dijkstra.h           → Input/output utilities  
+- graph_drawer.h          → Graphviz-based visualization interface  
+- example_io_files/       → Sample CSV input/output files  
+
+Function Summary:
+
+1. calculate_shortest_path(...)  
+   Location: dijkstra.h  
+   Description: Computes shortest path using Dijkstra’s algorithm  
+   Inputs: adjacency matrix, source node, target node  
+   Outputs: shortest path and cost
+
+2. read_graph_from_csv(...)  
+   Location: IO_dijkstra.h  
+   Description: Reads graph data from CSV file  
+   Input: CSV file path  
+   Output: adjacency matrix
+
+3. print_path(...)  
+   Location: IO_dijkstra.h  
+   Description: Displays path in terminal  
+   Input: path array, total distance  
+
+4. write_output(...)  
+   Location: IO_dijkstra.h  
+   Description: Writes path and distance to file  
+   Inputs: path array, distance, output path  
+
+5. draw_graph(...)  
+   Location: graph_drawer.h  
+   Description: Visualizes graph and path using Graphviz  
+   Inputs: graph data, path information  
+   Output: DOT file or rendered image
 
